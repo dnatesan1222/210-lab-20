@@ -15,6 +15,7 @@ class Chair {
                 // constructors
                 Chair() {
                         prices = new double[SIZE];
+                        srand(time(0));
                         legs = (rand() % (2)) + 3;
                         for (int i = 0; i < SIZE; i++){
                                 double p = (rand() % (MAX-MIN+1) + MIN) / (double) 100;
@@ -49,6 +50,7 @@ class Chair {
                 }
 };
 int main() {
+    srand(time(0));
     int test = (rand() % (2)) + 3;
     cout << test << endl;
 /*        cout << fixed << setprecision(2);
