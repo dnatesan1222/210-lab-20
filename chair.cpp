@@ -15,7 +15,7 @@ class Chair {
                 // constructors
                 Chair() {
                         prices = new double[SIZE];
-                        legs = (rand() % (2) + 3);
+                        legs = (rand() % (2)) + 3;
                         for (int i = 0; i < SIZE; i++){
                                 double p = (rand() % (MAX-MIN+1) + MIN) / (double) 100;
                         	prices[i] = p;
@@ -49,7 +49,8 @@ class Chair {
                 }
 };
 int main() {
-
+    int test = (rand() % (2)) + 3;
+    cout << test << endl;
 /*        cout << fixed << setprecision(2);
         //creating pointer to first chair object
         Chair *chairPtr = new Chair;
