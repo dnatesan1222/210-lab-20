@@ -3,8 +3,10 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 using namespace std;
 const int SIZE = 3;
+const int MIN = 10000, MAX = 99999;
 class Chair {
         private:
                 int legs;
@@ -14,14 +16,16 @@ class Chair {
                 Chair() {
                         prices = new double[SIZE];
                         legs = 0;
-                        for (int i = 0; i < SIZE; i++)
-                                prices[i] = 0;
+                        for (int i = 0; i < SIZE; i++){
+                                double p = (rand() % (MAX-MIN+1) + MIN) / (double) 100;
+                        	prices[i] = p;
+                        }
                 }
-                Chair(int l) {
+                Chair(int l, double p[]) {
                         prices = new double[SIZE];
                         legs = l;
                         for (int i = 0; i < SIZE; i++)
-                                prices[i] = 0;
+                                prices[i] = p[i];
                 }
                 // setters and getters
                 void setLegs(int l) { legs = l; }
