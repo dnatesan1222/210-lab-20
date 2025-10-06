@@ -15,7 +15,7 @@ class Chair {
                 // constructors
                 Chair() {
                         prices = new double[SIZE];
-                        legs = 0;
+                        legs = (rand() % (2) + 3);
                         for (int i = 0; i < SIZE; i++){
                                 double p = (rand() % (MAX-MIN+1) + MIN) / (double) 100;
                         	prices[i] = p;
@@ -49,7 +49,8 @@ class Chair {
                 }
 };
 int main() {
-        cout << fixed << setprecision(2);
+
+/*        cout << fixed << setprecision(2);
         //creating pointer to first chair object
         Chair *chairPtr = new Chair;
         chairPtr->setLegs(4);
@@ -71,6 +72,6 @@ int main() {
         collection[2].setPrices(626.26, 515.15, 757.57);
         for (int i = 0; i < SIZE; i++)
                 collection[i].print();
-        return 0;
+        */return 0;
 }
 
