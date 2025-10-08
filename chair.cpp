@@ -5,8 +5,10 @@
 #include <iomanip>
 #include <cstdlib>
 using namespace std;
+
 const int SIZE = 3;
 const int MIN = 10000, MAX = 99999;
+
 class Chair {
         private:
                 int legs;
@@ -48,9 +50,10 @@ class Chair {
                         cout << endl << endl;
                 }
 };
+
 int main() {
     srand(time(0));
-/*        cout << fixed << setprecision(2);
+        cout << fixed << setprecision(2);
         //creating pointer to first chair object
         Chair *chairPtr = new Chair;
         chairPtr->setLegs(4);
@@ -72,6 +75,6 @@ int main() {
         collection[2].setPrices(626.26, 515.15, 757.57);
         for (int i = 0; i < SIZE; i++)
                 collection[i].print();
-        */return 0;
+        return 0;
 }
 
