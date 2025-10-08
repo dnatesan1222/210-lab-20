@@ -61,19 +61,16 @@ int main() {
         chairPtr->print();
         
     //creating dynamic chair object with constructor
-    double arr = {525.25, 434.34, 252.52}
+    double arr[] = {525.25, 434.34, 252.52};
     Chair *livingChair = new Chair(3, arr);
     livingChair->print();
     delete livingChair;
-    livingChair = nullptr;/*
+    livingChair = nullptr;
         
     //creating dynamic array of chair objects
-        Chair *collection = new Chair[SIZE];
-        collection[0] = new Chair();
-        collection[1] = new Chair();
-        collection[2] = new Chair();
+    Chair *collection = new Chair[SIZE];
     for (int i = 0; i < SIZE; i++)
-                collection[i].print();
-        return 0;*/
+        collection[i].print();
+    return 0;
 }
 
